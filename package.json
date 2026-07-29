@@ -6,7 +6,6 @@
     "build": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css"
   },
   "devDependencies": {
-    "@vercel/node": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
