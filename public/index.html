@@ -19,6 +19,7 @@
     <meta name="twitter:image" content="/og.png" />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="/css/app.css" />
+    <script src="/js/auth.js" defer></script>
   </head>
   <body class="overflow-x-hidden bg-[#f7faf9] text-slate-700">
     <a
@@ -59,9 +60,13 @@
         </nav>
 
         <div class="hidden items-center gap-3 lg:flex">
-          <a href="tel:+923348086611" class="rounded-full px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100">
-            +92 334 8086611
-          </a>
+          <button type="button" data-auth-open class="rounded-full px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100">
+            Sign in
+          </button>
+          <button type="button" data-account-button class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white py-1.5 pl-1.5 pr-4 text-sm font-bold text-slate-800 shadow-sm transition hover:border-teal-300 hover:bg-teal-50">
+            <span data-account-initial class="grid h-8 w-8 place-items-center rounded-full bg-[#0c7c72] text-xs font-black text-white">U</span>
+            <span data-account-label>Account</span>
+          </button>
           <a href="#contact" class="button-primary">Start learning <span aria-hidden="true">&rarr;</span></a>
         </div>
 
@@ -84,6 +89,11 @@
           <a href="#about" class="mobile-nav-link">About us</a>
           <a href="#batches" class="mobile-nav-link">Upcoming batches</a>
           <a href="#events" class="mobile-nav-link">Campus life</a>
+          <button type="button" data-auth-open class="mobile-nav-link text-left">Sign in</button>
+          <button type="button" data-account-button class="mobile-nav-link hidden items-center gap-3 text-left">
+            <span data-account-initial class="grid h-8 w-8 place-items-center rounded-full bg-[#0c7c72] text-xs font-black text-white">U</span>
+            <span data-account-label>Account</span>
+          </button>
           <a href="#contact" class="button-primary mt-3 justify-center">Start learning <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
@@ -489,27 +499,82 @@
       </div>
     </footer>
 
-    <script>
-      const menuButton = document.getElementById('menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
+    <dialog id="auth-dialog" class="auth-dialog">
+      <div class="auth-panel">
+        <div class="auth-brand-panel">
+          <div>
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-sm font-black text-[#0c7c72] shadow-lg">WE</span>
+            <p class="mt-10 text-xs font-black uppercase tracking-[0.24em] text-teal-100">Your learning journey</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] text-white">Build skills that move you forward.</h2>
+            <p class="mt-5 leading-7 text-teal-50">Create your WELC account to manage your learning journey and keep your progress connected.</p>
+          </div>
+          <div class="mt-10 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm text-teal-50">
+            <strong class="block text-white">Secure by design</strong>
+            <span class="mt-1 block">Your password is protected with industry-standard hashing and never stored as plain text.</span>
+          </div>
+        </div>
 
-      menuButton.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-        menuButton.setAttribute('aria-expanded', String(!isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-        menuIcon.textContent = isOpen ? '\u2261' : '\u00d7';
-        mobileMenu.classList.toggle('hidden', isOpen);
-      });
+        <div class="auth-form-panel">
+          <button type="button" data-auth-close class="auth-close" aria-label="Close account dialog">&times;</button>
 
-      mobileMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          menuButton.setAttribute('aria-expanded', 'false');
-          menuButton.setAttribute('aria-label', 'Open navigation menu');
-          menuIcon.textContent = '\u2261';
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    </script>
+          <div id="auth-message" class="auth-message hidden" role="status" aria-live="polite"></div>
+
+          <section id="login-view">
+            <p class="auth-kicker">Welcome back</p>
+            <h2 class="auth-title">Sign in to your account</h2>
+            <p class="auth-copy">Continue your WELC learning journey.</p>
+            <form id="login-form" class="mt-8 space-y-5">
+              <label class="auth-field">
+                <span>Email address</span>
+                <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+              </label>
+              <label class="auth-field">
+                <span>Password</span>
+                <input type="password" name="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="Enter your password" />
+              </label>
+              <button type="submit" class="button-primary w-full justify-center">Sign in</button>
+            </form>
+            <p class="auth-switch">New to WELC? <button type="button" data-auth-view="register">Create an account</button></p>
+          </section>
+
+          <section id="register-view" class="hidden">
+            <p class="auth-kicker">Join WELC</p>
+            <h2 class="auth-title">Create your account</h2>
+            <p class="auth-copy">Start building practical skills for real opportunities.</p>
+            <form id="register-form" class="mt-8 space-y-5">
+              <label class="auth-field">
+                <span>Full name</span>
+                <input type="text" name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="Your full name" />
+              </label>
+              <label class="auth-field">
+                <span>Email address</span>
+                <input type="email" name="email" autocomplete="email" required maxlength="320" placeholder="you@example.com" />
+              </label>
+              <label class="auth-field">
+                <span>Password</span>
+                <input type="password" name="password" autocomplete="new-password" required minlength="8" maxlength="128" placeholder="At least 8 characters" />
+              </label>
+              <button type="submit" class="button-primary w-full justify-center">Create account</button>
+            </form>
+            <p class="auth-switch">Already have an account? <button type="button" data-auth-view="login">Sign in</button></p>
+          </section>
+
+          <section id="account-view" class="hidden">
+            <p class="auth-kicker">Your account</p>
+            <h2 class="auth-title">Welcome to WELC</h2>
+            <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center">
+              <span id="account-initial" class="mx-auto grid h-20 w-20 place-items-center rounded-full bg-[#0c7c72] text-2xl font-black text-white shadow-lg">U</span>
+              <h3 id="account-name" class="mt-5 text-xl font-black text-[#071b2b]">Student</h3>
+              <p id="account-email" class="mt-1 text-sm text-slate-500"></p>
+            </div>
+            <a href="#courses" data-auth-close class="button-primary mt-6 w-full justify-center">Explore your next course</a>
+            <button id="logout-button" type="button" class="button-secondary mt-3 w-full justify-center">Sign out</button>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Airag Chatbot Widget -->
+    <script src="https://airagchatbot.com/widget.js" data-org="cms6cz09j00009kvj4y6z3frq"></script>
   </body>
 </html>

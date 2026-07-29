@@ -15,5 +15,8 @@
     </main>
 
     @include('components.footer')
+
+    <!-- Airag Chatbot Widget -->
+    <script src="https://airagchatbot.com/widget.js" data-org="cms6cz09j00009kvj4y6z3frq"></script>
 </body>
 </html>

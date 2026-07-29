@@ -4,12 +4,32 @@ const path = require('path');
 
 const PORT = 8000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
+const API_ROUTES = {
+  '/api/auth/register': require('./api/auth/register'),
+  '/api/auth/login': require('./api/auth/login'),
+  '/api/auth/logout': require('./api/auth/logout'),
+  '/api/auth/me': require('./api/auth/me'),
+};
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(PUBLIC_DIR, req.url);
+  const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const apiHandler = API_ROUTES[requestUrl.pathname];
+
+  if (apiHandler) {
+    Promise.resolve(apiHandler(req, res)).catch((error) => {
+      console.error(error);
+      if (!res.headersSent) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+      }
+      res.end(JSON.stringify({ error: 'Internal server error.' }));
+    });
+    return;
+  }
+
+  let filePath = path.join(PUBLIC_DIR, decodeURIComponent(requestUrl.pathname));
   
   // Default to index.html for root path
-  if (req.url === '/') {
+  if (requestUrl.pathname === '/') {
     filePath = path.join(PUBLIC_DIR, 'index.html');
   }
   

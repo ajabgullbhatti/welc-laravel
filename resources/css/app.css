@@ -319,6 +319,82 @@
   .footer-links a {
     @apply transition hover:text-[#61d5c9];
   }
+
+  .auth-dialog {
+    @apply m-auto max-h-[92vh] w-[calc(100%-2rem)] max-w-4xl overflow-hidden rounded-[2rem] border-0 bg-white p-0 shadow-2xl;
+  }
+
+  .auth-dialog::backdrop {
+    @apply bg-slate-950/70 backdrop-blur-sm;
+  }
+
+  .auth-panel {
+    @apply grid max-h-[92vh] overflow-y-auto lg:grid-cols-[0.9fr_1.1fr];
+  }
+
+  .auth-brand-panel {
+    @apply hidden min-h-[640px] flex-col justify-between bg-[#0c7c72] p-10 lg:flex;
+  }
+
+  .auth-form-panel {
+    @apply relative bg-white px-6 py-12 sm:px-10 lg:px-12 lg:py-14;
+  }
+
+  .auth-close {
+    @apply absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-xl font-bold text-slate-600 transition hover:bg-slate-200 hover:text-slate-950;
+  }
+
+  .auth-kicker {
+    @apply text-xs font-black uppercase tracking-[0.22em] text-[#0c7c72];
+  }
+
+  .auth-title {
+    @apply mt-3 pr-10 text-3xl font-black tracking-[-0.035em] text-[#071b2b] sm:text-4xl;
+  }
+
+  .auth-copy {
+    @apply mt-3 text-sm leading-6 text-slate-500;
+  }
+
+  .auth-field {
+    @apply block;
+  }
+
+  .auth-field span {
+    @apply mb-2 block text-sm font-black text-slate-700;
+  }
+
+  .auth-field input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#0c7c72] focus:ring-4 focus:ring-teal-100;
+  }
+
+  .auth-field input:invalid:not(:placeholder-shown) {
+    @apply border-rose-300;
+  }
+
+  .auth-switch {
+    @apply mt-7 text-center text-sm text-slate-500;
+  }
+
+  .auth-switch button {
+    @apply font-black text-[#0c7c72] hover:underline;
+  }
+
+  .auth-message {
+    @apply mb-6 rounded-xl px-4 py-3 text-sm font-semibold;
+  }
+
+  .auth-message-error {
+    @apply bg-rose-50 text-rose-700;
+  }
+
+  .auth-message-success {
+    @apply bg-teal-50 text-teal-800;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
 }
 
 @layer utilities {
