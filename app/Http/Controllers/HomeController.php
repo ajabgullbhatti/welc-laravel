@@ -6,7 +6,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return response()->file(public_path('index.html'));
     }
 
     public function about()

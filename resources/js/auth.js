@@ -23,6 +23,7 @@ function setMenu(open) {
 function showMessage(message = '', type = 'error') {
   authMessage.textContent = message;
   authMessage.className = message ? `auth-message auth-message-${type}` : 'auth-message hidden';
+  authMessage.setAttribute('role', type === 'error' ? 'alert' : 'status');
 }
 
 function showView(viewName) {
@@ -38,6 +39,7 @@ function updateAuthUI(user) {
   signInButtons.forEach((button) => button.classList.toggle('hidden', Boolean(user)));
   accountButtons.forEach((button) => {
     button.classList.toggle('hidden', !user);
+    button.classList.toggle('flex', Boolean(user));
     if (user) {
       const label = button.querySelector('[data-account-label]');
       const initial = button.querySelector('[data-account-initial]');
@@ -55,12 +57,15 @@ function updateAuthUI(user) {
 
 function openAuth(viewName = currentUser ? 'account' : 'login') {
   showView(viewName);
-  authDialog.showModal();
+  if (!authDialog.open) authDialog.showModal();
   document.body.classList.add('overflow-hidden');
+  window.setTimeout(() => {
+    authViews[viewName].querySelector('input, button, a')?.focus();
+  }, 0);
 }
 
 function closeAuth() {
-  authDialog.close();
+  if (authDialog.open) authDialog.close();
   document.body.classList.remove('overflow-hidden');
 }
 
@@ -101,6 +106,10 @@ async function submitAuthForm(form, endpoint) {
   showMessage();
 
   try {
+    if (endpoint.endsWith('register') && body.password !== body.password_confirmation) {
+      throw new Error('The password confirmation does not match.');
+    }
+
     const payload = await request(endpoint, {
       method: 'POST',
       body: JSON.stringify(body),

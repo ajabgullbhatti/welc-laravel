@@ -3,578 +3,364 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#071b2b" />
-    <title>WELC | Practical Digital Skills for a Brighter Future</title>
-    <meta
-      name="description"
-      content="Learn practical digital skills with expert mentors, real projects, and career-focused training at WebExcels Learning Centre."
-    />
+    <meta name="theme-color" content="#4bb750" />
+    <title>WELC | Learn, Earn &amp; Make Your Future</title>
+    <meta name="description" content="WebExcels Learning Centre offers practical, career-focused courses in technology, design, digital marketing and e-commerce." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="WELC | Learn the skills. Build your future." />
-    <meta property="og:description" content="Practical digital training for real opportunities." />
-    <meta property="og:image" content="/og.png" />
+    <meta property="og:title" content="WELC | Learn, Earn &amp; Make Your Future" />
+    <meta property="og:description" content="Build practical digital skills with expert-led training at WELC." />
+    <meta property="og:image" content="/og-welc.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WELC | Learn the skills. Build your future." />
-    <meta name="twitter:description" content="Practical digital training for real opportunities." />
-    <meta name="twitter:image" content="/og.png" />
-    <link rel="preconnect" href="https://images.unsplash.com" />
+    <meta name="twitter:image" content="/og-welc.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/app.css" />
     <script src="/js/auth.js" defer></script>
   </head>
-  <body class="overflow-x-hidden bg-[#f7faf9] text-slate-700">
-    <a
-      href="#main-content"
-      class="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-white px-5 py-3 font-bold text-slate-900 shadow-xl transition focus:translate-y-0"
-    >
-      Skip to content
-    </a>
+  <body class="overflow-x-hidden bg-white text-slate-700">
+    <a href="#main-content" class="fixed left-4 top-4 z-[100] -translate-y-24 rounded bg-white px-5 py-3 font-bold text-slate-900 shadow-xl transition focus:translate-y-0">Skip to content</a>
 
-    <div class="bg-[#061927] text-white">
-      <div class="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-2.5 text-center text-xs font-semibold sm:text-sm">
-        <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-amber-400"></span>
-        Admissions are open for the next cohort
-        <a href="#batches" class="ml-1 text-amber-300 underline decoration-amber-300/40 underline-offset-4 hover:text-amber-200">
-          View schedule
-        </a>
-      </div>
-    </div>
-
-    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
-      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" class="group flex items-center gap-3" aria-label="WELC home">
-          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#0c7c72] text-base font-black tracking-tight text-white shadow-lg shadow-teal-900/15 transition group-hover:-rotate-3">
-            WE
-          </span>
-          <span>
-            <span class="block text-lg font-black leading-none tracking-tight text-[#071b2b]">WELC</span>
-            <span class="mt-1 block text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Learning Centre</span>
-          </span>
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="mx-auto flex h-[102px] max-w-[1170px] items-center justify-between px-4 sm:px-6">
+        <a href="#home" class="flex items-center" aria-label="WELC home">
+          <img src="/assets/welc/wlc.png" alt="WELC.PK" class="h-[72px] w-[220px] object-contain object-left" />
         </a>
 
-        <nav class="hidden items-center gap-8 text-sm font-bold text-slate-600 lg:flex" aria-label="Primary navigation">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#courses" class="nav-link">Courses</a>
-          <a href="#about" class="nav-link">About us</a>
-          <a href="#batches" class="nav-link">Batches</a>
-          <a href="#events" class="nav-link">Campus life</a>
+        <nav class="hidden items-center text-[13px] font-bold uppercase text-[#666666] xl:flex" aria-label="Primary navigation">
+          <a class="reference-nav-link" href="#home">Home</a>
+          <a class="reference-nav-link" href="#about">About us</a>
+          <a class="reference-nav-link" href="#calendar">Programme Calendar</a>
+          <a class="reference-nav-link" href="#courses">WELC Courses</a>
+          <a class="reference-nav-link" href="#events">Gallery</a>
+          <a class="reference-nav-link" href="#footer">Careers</a>
+          <a class="reference-nav-link" href="#contact">Contact us</a>
+          <button type="button" data-auth-open class="reference-nav-link uppercase">My Account</button>
+          <a class="reference-nav-link" href="#courses">Enroll</a>
         </nav>
 
-        <div class="hidden items-center gap-3 lg:flex">
-          <button type="button" data-auth-open class="rounded-full px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100">
-            Sign in
-          </button>
-          <button type="button" data-account-button class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white py-1.5 pl-1.5 pr-4 text-sm font-bold text-slate-800 shadow-sm transition hover:border-teal-300 hover:bg-teal-50">
-            <span data-account-initial class="grid h-8 w-8 place-items-center rounded-full bg-[#0c7c72] text-xs font-black text-white">U</span>
-            <span data-account-label>Account</span>
-          </button>
-          <a href="#contact" class="button-primary">Start learning <span aria-hidden="true">&rarr;</span></a>
+        <div class="hidden items-center gap-3 lg:flex xl:hidden">
+          <button type="button" data-auth-open class="text-xs font-bold uppercase text-[#666666]">My Account</button>
         </div>
 
-        <button
-          id="menu-button"
-          type="button"
-          class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-2xl text-slate-800 transition hover:border-teal-300 hover:bg-teal-50 lg:hidden"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-          aria-label="Open navigation menu"
-        >
-          <span id="menu-icon" aria-hidden="true">&#8801;</span>
+        <button id="menu-button" type="button" class="grid h-11 w-11 place-items-center rounded border border-slate-200 text-2xl text-[#17233c] xl:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
+          <span id="menu-icon" aria-hidden="true">≡</span>
         </button>
       </div>
-
-      <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-5 shadow-xl lg:hidden" aria-label="Mobile navigation">
-        <div class="mx-auto flex max-w-7xl flex-col gap-1">
-          <a href="#home" class="mobile-nav-link">Home</a>
-          <a href="#courses" class="mobile-nav-link">Courses</a>
-          <a href="#about" class="mobile-nav-link">About us</a>
-          <a href="#batches" class="mobile-nav-link">Upcoming batches</a>
-          <a href="#events" class="mobile-nav-link">Campus life</a>
-          <button type="button" data-auth-open class="mobile-nav-link text-left">Sign in</button>
-          <button type="button" data-account-button class="mobile-nav-link hidden items-center gap-3 text-left">
-            <span data-account-initial class="grid h-8 w-8 place-items-center rounded-full bg-[#0c7c72] text-xs font-black text-white">U</span>
+      <nav id="mobile-menu" class="hidden border-t border-slate-100 bg-white px-4 py-5 shadow-xl xl:hidden" aria-label="Mobile navigation">
+        <div class="mx-auto grid max-w-7xl gap-1 text-sm font-bold text-[#17233c]">
+          <a class="mobile-reference-link" href="#home">Home</a>
+          <a class="mobile-reference-link" href="#about">About us</a>
+          <a class="mobile-reference-link" href="#calendar">Programme Calendar</a>
+          <a class="mobile-reference-link" href="#courses">WELC Courses</a>
+          <a class="mobile-reference-link" href="#events">Gallery</a>
+          <a class="mobile-reference-link" href="#contact">Contact us</a>
+          <button type="button" data-auth-open class="mobile-reference-link text-left">Student Login</button>
+          <button type="button" data-account-button class="mobile-reference-link hidden items-center gap-3 text-left">
+            <span data-account-initial class="grid h-8 w-8 place-items-center rounded-full bg-[#169447] text-xs font-extrabold text-white">U</span>
             <span data-account-label>Account</span>
           </button>
-          <a href="#contact" class="button-primary mt-3 justify-center">Start learning <span aria-hidden="true">&rarr;</span></a>
+          <a href="#courses" class="reference-button mt-3 justify-center">Enroll now</a>
         </div>
       </nav>
     </header>
 
     <main id="main-content">
-      <section id="home" class="hero-grid relative isolate overflow-hidden bg-[#071b2b] text-white">
-        <div class="hero-orb hero-orb-one"></div>
-        <div class="hero-orb hero-orb-two"></div>
-        <div class="mx-auto grid min-h-[720px] max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
-          <div class="relative z-10 max-w-3xl">
-            <div class="eyebrow-dark">
-              <span class="h-2 w-2 rounded-full bg-amber-400"></span>
-              Skills that create opportunities
-            </div>
-            <h1 class="mt-7 text-5xl font-black leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              Learn the skills.
-              <span class="block text-[#61d5c9]">Build your future.</span>
-            </h1>
-            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Expert-led digital training, practical projects, and career guidance designed to help you move confidently from learning to earning.
-            </p>
-            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href="#courses" class="button-accent justify-center">Explore courses <span aria-hidden="true">&rarr;</span></a>
-              <a href="#batches" class="button-ghost justify-center">View upcoming batches</a>
-            </div>
-            <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-white/10 pt-7">
-              <div class="flex -space-x-3" aria-hidden="true">
-                <span class="avatar bg-amber-300 text-slate-900">AK</span>
-                <span class="avatar bg-teal-300 text-slate-900">HR</span>
-                <span class="avatar bg-sky-300 text-slate-900">FS</span>
-                <span class="avatar bg-white text-slate-900">+</span>
-              </div>
-              <div>
-                <div class="flex items-center gap-1 text-amber-300" aria-label="Rated five out of five">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="mt-1 text-sm font-semibold text-slate-300">Trusted by 10,000+ ambitious learners</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative z-10 mx-auto w-full max-w-[560px] lg:mx-0 lg:ml-auto">
-            <div class="relative rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85"
-                alt="A group of students collaborating on a digital project"
-                class="h-[510px] w-full rounded-[1.5rem] object-cover"
-              />
-              <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/20 bg-[#061927]/90 p-5 shadow-xl backdrop-blur-md">
-                <div class="flex items-center justify-between gap-4">
-                  <div>
-                    <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#61d5c9]">Learning outcome</p>
-                    <p class="mt-2 text-base font-bold text-white">Build a portfolio, not just notes.</p>
-                  </div>
-                  <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-amber-400 text-xl text-slate-950" aria-hidden="true">&#10003;</span>
-                </div>
-              </div>
-            </div>
-            <div class="absolute -left-8 top-14 hidden rounded-2xl bg-white p-4 text-slate-900 shadow-2xl xl:block">
-              <p class="text-2xl font-black text-[#0c7c72]">50+</p>
-              <p class="text-xs font-bold text-slate-500">Batches delivered</p>
-            </div>
-            <div class="absolute -right-5 top-40 hidden rounded-2xl border border-white/10 bg-amber-400 p-4 text-slate-950 shadow-2xl xl:block">
-              <p class="text-2xl font-black">100%</p>
-              <p class="text-xs font-bold">Hands-on learning</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="border-b border-slate-200 bg-white">
-        <div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
-          <div class="stat-item"><strong>10K+</strong><span>Students trained</span></div>
-          <div class="stat-item"><strong>20+</strong><span>Career programs</span></div>
-          <div class="stat-item"><strong>4.9/5</strong><span>Student rating</span></div>
-          <div class="stat-item"><strong>2</strong><span>Learning campuses</span></div>
-        </div>
-      </section>
-
-      <section id="courses" class="section-shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow-light">Choose your path</p>
-            <h2 class="section-title">Skills built for the real world.</h2>
-            <p class="section-copy">Focused programs that combine expert instruction, guided practice, and portfolio-ready outcomes.</p>
-          </div>
-          <a href="#contact" class="button-secondary hidden sm:inline-flex">Browse all courses <span aria-hidden="true">&rarr;</span></a>
-        </div>
-
-        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <article class="course-card group">
-            <div class="course-visual bg-gradient-to-br from-violet-100 via-fuchsia-50 to-amber-50">
-              <span class="course-number text-violet-700">01</span>
-              <span class="course-pill">Most popular</span>
-              <div class="course-monogram bg-violet-600">Gd</div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
-                <span>Design &amp; Creative</span><span>12 weeks</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Graphic Design with AI</h3>
-              <p class="mt-3 leading-7 text-slate-600">Create standout brand visuals and accelerate your workflow with modern AI tools.</p>
-              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
-                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 70,000</p></div>
-                <a href="#contact" class="card-arrow" aria-label="Enroll in Graphic Design with AI">&rarr;</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card group">
-            <div class="course-visual bg-gradient-to-br from-sky-100 via-cyan-50 to-teal-50">
-              <span class="course-number text-sky-700">02</span>
-              <span class="course-pill">Career track</span>
-              <div class="course-monogram bg-sky-600">Fs</div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
-                <span>Development</span><span>11 months</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Full Stack MERN Developer</h3>
-              <p class="mt-3 leading-7 text-slate-600">Build production-ready web applications with React, Node, Express, and MongoDB.</p>
-              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
-                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 75,000</p></div>
-                <a href="#contact" class="card-arrow" aria-label="Enroll in Full Stack MERN Developer">&rarr;</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card group md:col-span-2 xl:col-span-1">
-            <div class="course-visual bg-gradient-to-br from-amber-100 via-orange-50 to-rose-50">
-              <span class="course-number text-amber-700">03</span>
-              <span class="course-pill">Creator track</span>
-              <div class="course-monogram bg-amber-500 text-slate-950">Ve</div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
-                <span>Media &amp; Content</span><span>10 weeks</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Professional Video Editing</h3>
-              <p class="mt-3 leading-7 text-slate-600">Produce polished reels, ads, interviews, and social content that holds attention.</p>
-              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
-                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 60,000</p></div>
-                <a href="#contact" class="card-arrow" aria-label="Enroll in Professional Video Editing">&rarr;</a>
-              </div>
-            </div>
-          </article>
-        </div>
-        <a href="#contact" class="button-secondary mt-7 justify-center sm:hidden">Browse all courses <span aria-hidden="true">&rarr;</span></a>
-      </section>
-
-      <section id="about" class="overflow-hidden bg-[#eaf5f2] py-24 lg:py-32">
-        <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div class="relative">
-            <div class="absolute -left-10 -top-10 h-44 w-44 rounded-full border-[28px] border-white/60"></div>
-            <img
-              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=85"
-              alt="An instructor helping students during a practical session"
-              class="relative h-[560px] w-full rounded-[2rem] object-cover shadow-2xl shadow-teal-950/15"
-            />
-            <div class="absolute -bottom-6 left-5 right-5 rounded-2xl bg-white p-5 shadow-xl sm:left-auto sm:right-6 sm:w-72">
-              <p class="text-sm font-bold text-slate-500">Our promise</p>
-              <p class="mt-2 text-lg font-black leading-snug text-[#071b2b]">Every lesson moves you closer to earning.</p>
-            </div>
-          </div>
-
-          <div class="lg:pl-8">
-            <p class="eyebrow-light">The WELC advantage</p>
-            <h2 class="section-title">Learning that changes what you can do.</h2>
-            <p class="mt-6 text-lg leading-8 text-slate-600">
-              WebExcels Learning Centre helps ambitious learners become confident creators, professionals, and entrepreneurs through structured training and real support.
-            </p>
-            <div class="mt-9 space-y-4">
-              <div class="advantage-row">
-                <span class="advantage-number">01</span>
-                <div><h3>Learn from active professionals</h3><p>Practical insights from mentors who understand today&rsquo;s market.</p></div>
-              </div>
-              <div class="advantage-row">
-                <span class="advantage-number">02</span>
-                <div><h3>Practice on real-world projects</h3><p>Turn every module into work you can confidently showcase.</p></div>
-              </div>
-              <div class="advantage-row">
-                <span class="advantage-number">03</span>
-                <div><h3>Get career and earning guidance</h3><p>Build the habits, profile, and direction needed for your next step.</p></div>
-              </div>
-            </div>
-            <a href="#contact" class="button-primary mt-9">Discover WELC <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell">
-        <div class="text-center">
-          <p class="eyebrow-light justify-center">More than a classroom</p>
-          <h2 class="section-title mx-auto max-w-3xl">Everything you need to turn knowledge into momentum.</h2>
-        </div>
-        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="feature-card feature-card-dark">
-            <span class="feature-icon">Ex</span>
-            <h3>Expert instructors</h3>
-            <p>Learn from professionals with current, hands-on industry experience.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon">Pr</span>
-            <h3>Project-first learning</h3>
-            <p>Practice each skill through guided exercises and meaningful projects.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon">Cv</span>
-            <h3>Verified certificate</h3>
-            <p>Graduate with credentials that support your professional profile.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon">Le</span>
-            <h3>Learn to earn</h3>
-            <p>Prepare for freelancing, employment, and business opportunities.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="batches" class="relative overflow-hidden bg-[#071b2b] py-24 text-white lg:py-32">
-        <div class="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full border-[80px] border-teal-400/5"></div>
-        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow-dark">Plan your learning</p>
-              <h2 class="mt-4 text-4xl font-black tracking-[-0.035em] text-white sm:text-5xl">Upcoming batches</h2>
-              <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">Small, focused groups with practical schedules and direct mentor support.</p>
-            </div>
-            <a href="#contact" class="button-ghost hidden sm:inline-flex">Reserve your seat <span aria-hidden="true">&rarr;</span></a>
-          </div>
-
-          <div class="mt-12 grid gap-5 lg:grid-cols-3">
-            <article class="batch-card">
-              <div class="flex items-center justify-between">
-                <span class="batch-date"><strong>12</strong><small>AUG</small></span>
-                <span class="status-pill">Seats available</span>
-              </div>
-              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#61d5c9]">E-commerce</p>
-              <h3 class="mt-2 text-2xl font-black">Amazon Virtual Assistant</h3>
-              <dl class="mt-6 space-y-3 text-sm text-slate-300">
-                <div><dt>Schedule</dt><dd>Mon &middot; Wed &middot; Fri</dd></div>
-                <div><dt>Timing</dt><dd>11:00 am &ndash; 12:30 pm</dd></div>
-                <div><dt>Fee</dt><dd>Rs 30,000</dd></div>
-              </dl>
-              <a href="#contact" class="batch-link">Enroll in this batch <span>&rarr;</span></a>
-            </article>
-
-            <article class="batch-card border-amber-300/30 bg-amber-300 text-slate-950">
-              <div class="flex items-center justify-between">
-                <span class="batch-date border-slate-900/15 bg-white/50"><strong>19</strong><small>AUG</small></span>
-                <span class="status-pill bg-slate-950 text-white">Filling fast</span>
-              </div>
-              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-slate-700">Digital growth</p>
-              <h3 class="mt-2 text-2xl font-black">SEO &amp; Content Strategy</h3>
-              <dl class="mt-6 space-y-3 text-sm text-slate-800">
-                <div class="border-slate-900/10"><dt>Schedule</dt><dd>Tue &middot; Thu &middot; Sat</dd></div>
-                <div class="border-slate-900/10"><dt>Timing</dt><dd>3:30 pm &ndash; 5:00 pm</dd></div>
-                <div class="border-slate-900/10"><dt>Fee</dt><dd>Rs 40,000</dd></div>
-              </dl>
-              <a href="#contact" class="batch-link border-slate-900/15 text-slate-950">Enroll in this batch <span>&rarr;</span></a>
-            </article>
-
-            <article class="batch-card">
-              <div class="flex items-center justify-between">
-                <span class="batch-date"><strong>26</strong><small>AUG</small></span>
-                <span class="status-pill">Seats available</span>
-              </div>
-              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#61d5c9]">Creative design</p>
-              <h3 class="mt-2 text-2xl font-black">Graphic Design with AI</h3>
-              <dl class="mt-6 space-y-3 text-sm text-slate-300">
-                <div><dt>Schedule</dt><dd>Mon &middot; Wed &middot; Fri</dd></div>
-                <div><dt>Timing</dt><dd>5:30 pm &ndash; 7:00 pm</dd></div>
-                <div><dt>Fee</dt><dd>Rs 35,000</dd></div>
-              </dl>
-              <a href="#contact" class="batch-link">Enroll in this batch <span>&rarr;</span></a>
-            </article>
-          </div>
-          <a href="#contact" class="button-ghost mt-7 justify-center sm:hidden">Reserve your seat <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </section>
-
-      <section id="events" class="section-shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow-light">Life at WELC</p>
-            <h2 class="section-title">Where learning meets community.</h2>
-          </div>
-          <p class="max-w-md text-base leading-7 text-slate-600">Workshops, showcases, and community moments that make the learning journey memorable.</p>
-        </div>
-        <div class="mt-12 grid gap-6 lg:grid-cols-12">
-          <article class="event-card lg:col-span-7">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=85" alt="Students enjoying a WELC campus event" />
-            <div class="event-overlay">
-              <span>Student showcase &middot; 2025</span>
-              <h3>Excel Fest: Ideas, talent, and new possibilities.</h3>
-              <p>Students presented original projects, connected with mentors, and celebrated a year of growth.</p>
-            </div>
-          </article>
-          <div class="grid gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
-            <article class="event-card event-card-small">
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85" alt="A practical workshop session" />
-              <div class="event-overlay"><span>Workshop</span><h3>AI for modern creators</h3></div>
-            </article>
-            <article class="event-card event-card-small">
-              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=85" alt="Career networking discussion" />
-              <div class="event-overlay"><span>Career session</span><h3>Meet the people shaping digital careers</h3></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-white py-24 lg:py-32">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="home" class="reference-hero relative isolate min-h-[380px] overflow-hidden text-white">
+        <img src="/assets/welc/hero-02.jpg" alt="WebExcels seminar at a university auditorium" class="absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-black/15"></div>
+        <div class="relative mx-auto flex min-h-[380px] max-w-[980px] items-center justify-center px-4">
           <div class="text-center">
-            <p class="eyebrow-light justify-center">Student success stories</p>
-            <h2 class="section-title mx-auto max-w-3xl">Confidence that continues beyond the classroom.</h2>
-          </div>
-          <div class="mt-12 grid gap-6 lg:grid-cols-3">
-            <blockquote class="testimonial-card">
-              <div class="text-amber-400" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>&ldquo;The hands-on approach helped me stop overthinking and start building. I landed my first freelance client within a month.&rdquo;</p>
-              <footer><span class="avatar bg-violet-100 text-violet-700">AK</span><div><strong>Ayesha Khan</strong><small>Graphic Design graduate</small></div></footer>
-            </blockquote>
-            <blockquote class="testimonial-card testimonial-card-featured">
-              <div class="text-amber-300" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>&ldquo;I went from zero coding experience to presenting complete live projects. The structure and mentor support made the difference.&rdquo;</p>
-              <footer><span class="avatar bg-sky-100 text-sky-700">HR</span><div><strong>Hamza Raza</strong><small>Full Stack graduate</small></div></footer>
-            </blockquote>
-            <blockquote class="testimonial-card">
-              <div class="text-amber-400" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>&ldquo;The curriculum felt current, focused, and practical. I finally have a portfolio that reflects what I can actually do.&rdquo;</p>
-              <footer><span class="avatar bg-rose-100 text-rose-700">FS</span><div><strong>Fatima Shah</strong><small>Video Editing graduate</small></div></footer>
-            </blockquote>
+            <h1 class="inline bg-[#5cb85c] px-5 py-2 text-4xl font-light leading-[1.7] text-white sm:text-5xl">Webexcel learning Center</h1>
+            <p class="mt-5 text-xl font-light text-white drop-shadow">One of the best Learning Center</p>
+            <a href="#courses" class="mt-7 inline-flex rounded-sm bg-white px-7 py-3 text-sm font-semibold text-slate-800 shadow-lg">Top Courses</a>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div class="cta-panel relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#0c7c72] px-6 py-14 text-white shadow-2xl shadow-teal-900/20 sm:px-10 lg:px-16 lg:py-20">
-          <div class="absolute -right-16 -top-20 h-72 w-72 rounded-full border-[52px] border-white/10"></div>
-          <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
-            <div>
-              <p class="text-sm font-black uppercase tracking-[0.24em] text-teal-100">Your next chapter can start today</p>
-              <h2 class="mt-4 max-w-3xl text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
-                Ready to turn your potential into practical skills?
-              </h2>
-              <p class="mt-5 max-w-2xl text-lg leading-8 text-teal-50">Talk to our admissions team and find the program that fits your goals.</p>
-            </div>
-            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <a href="tel:+923348086611" class="button-accent justify-center">Call admissions <span aria-hidden="true">&rarr;</span></a>
-              <a href="mailto:edu@welc.pk" class="button-ghost justify-center">Email us</a>
+      <section id="calendar" class="bg-white py-14">
+        <div class="mx-auto max-w-[1170px] px-4 sm:px-6">
+          <h2 class="classic-heading">Upcoming Courses Calendar</h2>
+          <div class="mt-5 flex justify-center gap-2">
+            <button class="rounded-sm bg-[#4bb750] px-5 py-2 text-sm font-semibold text-white">Sialkot</button>
+            <button class="rounded-sm bg-[#4bb750] px-5 py-2 text-sm font-semibold text-white">Lahore</button>
+          </div>
+          <h3 class="mt-5 text-center text-sm font-semibold text-[#666666]">Lahore Upcoming Courses Calendar</h3>
+          <div class="mt-10 overflow-hidden rounded-lg bg-white shadow-[0_12px_45px_rgba(23,35,60,0.08)]">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[980px] text-left text-sm">
+                <thead class="bg-[#4bb750] text-[11px] uppercase tracking-wider text-white">
+                  <tr>
+                    <th class="px-6 py-5">Course name</th><th class="px-5 py-5">Days</th><th class="px-5 py-5">Timing</th><th class="px-5 py-5">Start date</th><th class="px-5 py-5">Fees</th><th class="px-5 py-5">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="calendar-row"><td class="font-extrabold text-[#17233c]">Amazon VA Class</td><td>Mon / Wed / Fri</td><td>11:00am–12:30pm</td><td>17 Aug 2026</td><td><strong>Rs 30,000</strong> <del>40,000</del></td><td><a href="#contact">Enroll →</a></td></tr>
+                  <tr class="calendar-row"><td class="font-extrabold text-[#17233c]">Search Engine Optimization</td><td>Tue / Thu / Sat</td><td>03:30pm–05:00pm</td><td>18 Aug 2026</td><td><strong>Rs 30,000</strong> <del>40,000</del></td><td><a href="#contact">Enroll →</a></td></tr>
+                  <tr class="calendar-row"><td class="font-extrabold text-[#17233c]">Graphic Designing</td><td>Mon / Wed / Fri</td><td>11:00am–12:30pm</td><td>17 Aug 2026</td><td><strong>Rs 30,000</strong> <del>40,000</del></td><td><a href="#contact">Enroll →</a></td></tr>
+                  <tr class="calendar-row"><td class="font-extrabold text-[#17233c]">Web Development</td><td>Tue / Thu / Sat</td><td>11:00am–12:30pm</td><td>18 Aug 2026</td><td><strong>Rs 30,000</strong> <del>40,000</del></td><td><a href="#contact">Enroll →</a></td></tr>
+                  <tr class="calendar-row"><td class="font-extrabold text-[#17233c]">Social Media Marketing</td><td>Tue / Thu / Sat</td><td>03:00pm–05:00pm</td><td>18 Aug 2026</td><td><strong>Rs 30,000</strong> <del>40,000</del></td><td><a href="#contact">Enroll →</a></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-14">
+        <div class="mx-auto max-w-[1170px] px-4 text-center sm:px-6">
+          <h2 class="classic-heading">About Welc.pk</h2>
+          <p class="mx-auto mt-5 max-w-[1000px] text-[15px] font-medium leading-7 text-[#666666]">Welcome to the WebExcels Learning Center! "Learn, Earn and Make Your Future" with our wide range of courses designed to help you advance your skills and knowledge in the digital world. From Amazon and Alibaba marketing strategies to social media marketing and SEO, we have something for everyone. Whether you're a beginner looking to learn the basics of computer skills or a seasoned professional looking to stay ahead of the curve, we have the course for you. Our expert instructors and personalized learning approach will guide you every step of the way.<br />Join us today and start your journey to success.</p>
+        </div>
+      </section>
+
+      <section id="events" class="bg-white pb-16 pt-4">
+        <div class="mx-auto max-w-[1170px] px-4 sm:px-6">
+          <h2 class="classic-heading">Events</h2>
+          <h3 class="my-8 text-center text-2xl font-semibold text-[#f0ad4e]">Recent Events</h3>
+          <div class="event-strip">
+            <article class="classic-event"><img src="/assets/welc/event-excel-fest.png" alt="Excel Fest" /><strong>Excel Fest</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-excel-fest-2025.png" alt="Excel Fest 2025" /><strong>Excel Fest 2025</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-song.png" alt="Song Performance" /><strong>Song Performance</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-awards.png" alt="Awards" /><strong>Awards</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-gcwus.jpg" alt="WELC MOU with GC Women University Sialkot" /><strong>WELC MOU with GC Women University Sialkot</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-umt.jpg" alt="WELC and WebExcels Seminar at UMT" /><strong>WELC &amp; WebExcels Seminar at UMT</strong></article>
+            <article class="classic-event"><img src="/assets/welc/event-gaus.jpg" alt="WELC and WebExcels MOU with GAUS" /><strong>WELC &amp; WebExcels MOU with GAUS</strong></article>
+          </div>
+          <h3 class="mb-0 mt-8 text-center text-2xl font-semibold text-[#4bb750]">Upcoming Events</h3>
+        </div>
+      </section>
+
+      <section class="bg-[#2d2e32] text-white">
+        <div class="mx-auto grid max-w-[1170px] grid-cols-2 divide-x divide-white/30 px-4 sm:px-6 md:grid-cols-4">
+          <div class="reference-stat"><strong>50000</strong><span>Followers</span></div>
+          <div class="reference-stat"><strong>50</strong><span>Batches</span></div>
+          <div class="reference-stat"><strong>2000</strong><span>Students Enrolled</span></div>
+          <div class="reference-stat"><strong>1500</strong><span>Certified Students</span></div>
+        </div>
+      </section>
+
+      <section id="courses" class="bg-white py-16">
+        <div class="mx-auto max-w-[1170px] px-4 sm:px-6">
+          <h2 class="classic-heading">WELC Courses</h2>
+          <div class="course-strip mt-10 flex gap-7 overflow-x-auto pb-6">
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-graphic-design.png" alt="Graphic Design with AI Course" /></div>
+              <div class="p-6"><h3>Graphic Design with AI</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 70,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-video-editing.png" alt="Video Editing Course" /></div>
+              <div class="p-6"><h3>Video Editing</h3><div class="course-meta"><span>◷ 2.5 Months</span><span>Rs 60,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-mern.png" alt="Full Stack MERN Developer Course" /></div>
+              <div class="p-6"><h3>Full Stack MERN Developer</h3><div class="course-meta"><span>◷ 11 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-cyber-security.png" alt="Cyber Security and Ethical Hacking Pro Course" /></div>
+              <div class="p-6"><h3>Cyber Security &amp; Ethical Hacking</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 100,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-seo.png" alt="SEO and Ranking Strategies Course" /></div>
+              <div class="p-6"><h3>SEO &amp; Ranking Strategies</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-social-media.png" alt="Social Media Marketing Course" /></div>
+              <div class="p-6"><h3>Social Media Marketing</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-amazon.png" alt="Amazon Seller Stack Course" /></div>
+              <div class="p-6"><h3>Amazon Seller Stack</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-ai.png" alt="AI and Machine Learning Course" /></div>
+              <div class="p-6"><h3>AI &amp; Machine Learning</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 60,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-wordpress.png" alt="WordPress Mastery Course" /></div>
+              <div class="p-6"><h3>WordPress Mastery</h3><div class="course-meta"><span>◷ 1 Month</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-python.png" alt="Python for Beginners Course" /></div>
+              <div class="p-6"><h3>Python for Beginners</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 60,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-ielts.jpg" alt="IELTS Preparation Program Course" /></div>
+              <div class="p-6"><h3>IELTS Preparation Program</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-office.png" alt="Office Management Mastery Course" /></div>
+              <div class="p-6"><h3>Office Management Mastery</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-fullstack-pro.jpg" alt="Full Stack Web Development Pro Course" /></div>
+              <div class="p-6"><h3>Full Stack Web Development Pro</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-shopify.jpg" alt="Shopify Mastery Course" /></div>
+              <div class="p-6"><h3>Shopify Mastery</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-digital-marketing.png" alt="Digital Marketing with AI Course" /></div>
+              <div class="p-6"><h3>Digital Marketing with AI</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-alibaba.png" alt="Alibaba Business Pro Course" /></div>
+              <div class="p-6"><h3>Alibaba Business Pro</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-ebay.png" alt="Ebay Seller's Edge Course" /></div>
+              <div class="p-6"><h3>Ebay Seller's Edge</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-english.png" alt="English Spoken Course" /></div>
+              <div class="p-6"><h3>English Spoken</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-etsy.png" alt="Etsy Store Launchpad Course" /></div>
+              <div class="p-6"><h3>Etsy Store Launchpad</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-blender.png" alt="Blender Mastery Course" /></div>
+              <div class="p-6"><h3>Blender Mastery</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-android.png" alt="Android App Creation Program Course" /></div>
+              <div class="p-6"><h3>Android App Creation Program</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-import-export.png" alt="Import and Export Business Course" /></div>
+              <div class="p-6"><h3>Import &amp; Export Business</h3><div class="course-meta"><span>◷ 2 Months</span><span>Rs 40,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-uiux.png" alt="UI UX Designing Course" /></div>
+              <div class="p-6"><h3>UI UX Designing</h3><div class="course-meta"><span>◷ 4 Months</span><span>Rs 60,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+            <article class="reference-course">
+              <div class="course-image"><img src="/assets/welc/course-fullstack.png" alt="Full Stack Web Development Course" /></div>
+              <div class="p-6"><h3>Full Stack Web Development</h3><div class="course-meta"><span>◷ 3 Months</span><span>Rs 75,000</span></div><a href="#contact">Enroll now <span>→</span></a></div>
+            </article>
+          </div>
+          <div class="mt-11 text-center"><a href="#contact" class="reference-button">View all courses <span>→</span></a></div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative isolate overflow-hidden bg-cover bg-center py-16 text-center text-white" style="background-image:url('/assets/welc/group.jpg')">
+        <div class="absolute inset-0 -z-10 bg-[#333333]/85"></div>
+        <div class="mx-auto max-w-[1170px] px-4 sm:px-6">
+          <h2 class="text-4xl font-light capitalize">Get The Coaching Training</h2>
+          <h3 class="mt-2 text-xl font-light">By WELC</h3>
+          <div class="mx-auto mt-8 grid max-w-sm grid-cols-4 gap-2 sm:gap-4" aria-label="Enrollment countdown">
+            <div class="count-box"><strong>22</strong><span>Days</span></div>
+            <div class="count-box"><strong>12</strong><span>Hours</span></div>
+            <div class="count-box"><strong>23</strong><span>Minutes</span></div>
+            <div class="count-box"><strong>45</strong><span>Seconds</span></div>
+          </div>
+          <strong class="mt-6 block text-base font-semibold">It's limited Seating! Hurry up</strong>
+          <a href="#courses" class="reference-button mt-5">Register now</a>
+        </div>
+      </section>
+
+      <section id="gallery" class="py-16">
+        <div class="mx-auto max-w-[1170px] px-4 sm:px-6">
+          <div class="text-center">
+            <h2 class="classic-heading">Video Gallery</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-sm text-slate-500">video gallery of the year past years</p>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <a href="#events" class="gallery-tile"><img src="/assets/welc/event-excel-fest.png" alt="WELC Excel Fest video" /><span class="play-button">▶</span><strong>Excel Fest</strong></a>
+            <a href="#events" class="gallery-tile"><img src="/assets/welc/event-umt.jpg" alt="WELC seminar video" /><span class="play-button">▶</span><strong>UMT Seminar</strong></a>
+            <a href="#events" class="gallery-tile"><img src="/assets/welc/event-gaus.jpg" alt="WELC partnership video" /><span class="play-button">▶</span><strong>WELC &amp; GAUS</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" class="bg-[#4bb750] py-8 text-white">
+        <div class="mx-auto flex max-w-[1170px] flex-col items-center justify-between gap-6 px-4 sm:px-6 lg:flex-row">
+          <h2 class="text-xl font-semibold">Subcribe weekly newsletter</h2>
+          <form class="flex w-full max-w-xl" onsubmit="event.preventDefault()">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" type="email" required placeholder="Enter Valid Email Address" class="min-w-0 flex-1 bg-white px-5 py-3 text-sm text-slate-900 outline-none" />
+            <button class="bg-[#333333] px-6 py-3 text-xs font-semibold uppercase">Submit</button>
+          </form>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#061927] text-slate-300">
-      <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.65fr_1fr] lg:px-8">
+    <footer id="footer" class="bg-[#2d2e32] text-slate-300">
+      <div class="mx-auto grid max-w-[1170px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <a href="#home" class="flex items-center gap-3 text-white">
-            <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#0c7c72] font-black">WE</span>
-            <span class="text-xl font-black">WELC</span>
-          </a>
-          <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">Practical digital skills, expert mentorship, and real opportunities for ambitious learners.</p>
-          <div class="mt-6 flex gap-2">
-            <a href="#" class="social-link" aria-label="Facebook">f</a>
-            <a href="#" class="social-link" aria-label="Instagram">ig</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <img src="/assets/welc/wlc.png" alt="WELC.PK" class="h-20 w-52 object-contain object-left" />
+          <p class="mt-4 max-w-sm text-sm leading-7">Our expert instructors and personalized learning approach will guide you every step of the way. Join us today and start your journey to success.</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Information</h3>
+          <ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About us</a></li><li><a href="#courses">WELC Courses</a></li><li><a href="#events">Gallery</a></li><li><a href="#contact">Contact us</a></li></ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Instagram</h3>
+          <div class="mt-6 grid grid-cols-3 gap-2">
+            <img src="/assets/welc/instagram-1.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
+            <img src="/assets/welc/instagram-2.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
+            <img src="/assets/welc/instagram-3.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
+            <img src="/assets/welc/instagram-4.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
+            <img src="/assets/welc/instagram-5.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
+            <img src="/assets/welc/instagram-6.jpg" alt="WELC Instagram post" class="aspect-square w-full object-cover" />
           </div>
         </div>
         <div>
-          <h3 class="footer-title">Explore</h3>
-          <ul class="footer-links">
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About WELC</a></li>
-            <li><a href="#batches">Batches</a></li>
-            <li><a href="#events">Campus life</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Programs</h3>
-          <ul class="footer-links">
-            <li><a href="#courses">Graphic Design</a></li>
-            <li><a href="#courses">Web Development</a></li>
-            <li><a href="#courses">Video Editing</a></li>
-            <li><a href="#courses">Digital Marketing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Get in touch</h3>
-          <ul class="mt-5 space-y-4 text-sm">
-            <li><span class="block font-bold text-white">Phone</span><a href="tel:+923348086611" class="hover:text-[#61d5c9]">+92 334 8086611</a></li>
-            <li><span class="block font-bold text-white">Email</span><a href="mailto:edu@welc.pk" class="hover:text-[#61d5c9]">edu@welc.pk</a></li>
-            <li><span class="block font-bold text-white">Campuses</span><span>Sialkot &amp; Lahore</span></li>
+          <h3 class="footer-heading">Location</h3>
+          <ul class="footer-contact">
+            <li><span>●</span><p><strong>Sialkot Campus</strong>Al-Amin Center, Paris Road, opposite Sialkot Chamber of Commerce.</p></li>
+            <li><span>●</span><p><strong>Lahore Campus</strong>Saeed Alam Tower, 1st Floor, Liberty Market, Gulberg.</p></li>
+            <li><span>☎</span><p><a href="tel:+923348086611">+92 334 8086611</a></p></li>
+            <li><span>✉</span><p><a href="mailto:edu@welc.pk">edu@welc.pk</a></p></li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-white/10">
-        <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>&copy; 2026 WebExcels Learning Centre. All rights reserved.</p>
-          <p>Learn with purpose. Build with confidence.</p>
-        </div>
+      <div class="bg-[#222327]">
+        <div class="mx-auto max-w-[1170px] px-4 py-5 text-center text-xs sm:px-6"><p>© All Rights reserved. Powered By <span class="text-[#4bb750]">Web Excels</span></p></div>
       </div>
     </footer>
 
     <dialog id="auth-dialog" class="auth-dialog">
       <div class="auth-panel">
-        <div class="auth-brand-panel">
-          <div>
-            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-sm font-black text-[#0c7c72] shadow-lg">WE</span>
-            <p class="mt-10 text-xs font-black uppercase tracking-[0.24em] text-teal-100">Your learning journey</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] text-white">Build skills that move you forward.</h2>
-            <p class="mt-5 leading-7 text-teal-50">Create your WELC account to manage your learning journey and keep your progress connected.</p>
-          </div>
-          <div class="mt-10 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm text-teal-50">
-            <strong class="block text-white">Secure by design</strong>
-            <span class="mt-1 block">Your password is protected with industry-standard hashing and never stored as plain text.</span>
-          </div>
-        </div>
-
+        <aside class="auth-brand-panel">
+          <div><span class="logo-grid !border-white" aria-hidden="true"><b>W</b><b>E</b><b>L</b><b>C</b></span><p class="mt-8 text-xs font-extrabold uppercase tracking-[0.24em] text-green-100">Student Portal</p><h2 class="mt-4 font-display text-4xl font-extrabold leading-tight text-white">Your next skill starts here.</h2><p class="mt-5 leading-7 text-green-50">Access your learning account and continue moving from knowledge to opportunity.</p></div>
+          <p class="text-sm font-bold text-green-100">WebExcels Learning Centre</p>
+        </aside>
         <div class="auth-form-panel">
-          <button type="button" data-auth-close class="auth-close" aria-label="Close account dialog">&times;</button>
-
+          <button id="auth-close" type="button" class="auth-close" aria-label="Close account dialog">×</button>
           <div id="auth-message" class="auth-message hidden" role="status" aria-live="polite"></div>
-
           <section id="login-view">
-            <p class="auth-kicker">Welcome back</p>
-            <h2 class="auth-title">Sign in to your account</h2>
-            <p class="auth-copy">Continue your WELC learning journey.</p>
+            <p class="auth-kicker">Welcome back</p><h2 class="auth-title">Sign in to your account</h2><p class="auth-copy">Use the email and password connected to your WELC profile.</p>
             <form id="login-form" class="mt-8 space-y-5">
-              <label class="auth-field">
-                <span>Email address</span>
-                <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
-              </label>
-              <label class="auth-field">
-                <span>Password</span>
-                <input type="password" name="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="Enter your password" />
-              </label>
-              <button type="submit" class="button-primary w-full justify-center">Sign in</button>
+              <label class="auth-field"><span>Email address</span><input id="login-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+              <label class="auth-field"><span>Password</span><input id="login-password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password" /></label>
+              <button type="submit" class="reference-button w-full justify-center">Sign in <span>→</span></button>
             </form>
-            <p class="auth-switch">New to WELC? <button type="button" data-auth-view="register">Create an account</button></p>
+            <p class="auth-switch">New to WELC? <button id="show-register" type="button">Create an account</button></p>
           </section>
-
           <section id="register-view" class="hidden">
-            <p class="auth-kicker">Join WELC</p>
-            <h2 class="auth-title">Create your account</h2>
-            <p class="auth-copy">Start building practical skills for real opportunities.</p>
+            <p class="auth-kicker">Join WELC</p><h2 class="auth-title">Create your account</h2><p class="auth-copy">Create your profile to start your learning journey.</p>
             <form id="register-form" class="mt-8 space-y-5">
-              <label class="auth-field">
-                <span>Full name</span>
-                <input type="text" name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="Your full name" />
-              </label>
-              <label class="auth-field">
-                <span>Email address</span>
-                <input type="email" name="email" autocomplete="email" required maxlength="320" placeholder="you@example.com" />
-              </label>
-              <label class="auth-field">
-                <span>Password</span>
-                <input type="password" name="password" autocomplete="new-password" required minlength="8" maxlength="128" placeholder="At least 8 characters" />
-              </label>
-              <button type="submit" class="button-primary w-full justify-center">Create account</button>
+              <label class="auth-field"><span>Full name</span><input id="register-name" name="name" type="text" autocomplete="name" minlength="2" required placeholder="Your full name" /></label>
+              <label class="auth-field"><span>Email address</span><input id="register-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+              <label class="auth-field"><span>Password</span><input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters" /></label>
+              <label class="auth-field"><span>Confirm password</span><input id="register-password-confirmation" name="password_confirmation" type="password" autocomplete="new-password" minlength="8" required placeholder="Repeat your password" /></label>
+              <button type="submit" class="reference-button w-full justify-center">Create account <span>→</span></button>
             </form>
-            <p class="auth-switch">Already have an account? <button type="button" data-auth-view="login">Sign in</button></p>
+            <p class="auth-switch">Already have an account? <button id="show-login" type="button">Sign in</button></p>
           </section>
-
           <section id="account-view" class="hidden">
-            <p class="auth-kicker">Your account</p>
-            <h2 class="auth-title">Welcome to WELC</h2>
-            <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center">
-              <span id="account-initial" class="mx-auto grid h-20 w-20 place-items-center rounded-full bg-[#0c7c72] text-2xl font-black text-white shadow-lg">U</span>
-              <h3 id="account-name" class="mt-5 text-xl font-black text-[#071b2b]">Student</h3>
-              <p id="account-email" class="mt-1 text-sm text-slate-500"></p>
-            </div>
-            <a href="#courses" data-auth-close class="button-primary mt-6 w-full justify-center">Explore your next course</a>
-            <button id="logout-button" type="button" class="button-secondary mt-3 w-full justify-center">Sign out</button>
+            <p class="auth-kicker">Student account</p><h2 class="auth-title">Welcome to WELC</h2>
+            <div class="mt-8 rounded border border-green-100 bg-green-50 p-6"><p class="text-sm font-bold text-slate-500">Signed in as</p><p id="account-name" class="mt-2 text-2xl font-extrabold text-[#17233c]"></p><p id="account-email" class="mt-1 text-sm text-slate-600"></p></div>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="#courses" id="account-explore" class="reference-button flex-1 justify-center">Explore courses</a><button id="logout-button" type="button" class="reference-button-light flex-1 justify-center">Sign out</button></div>
           </section>
         </div>
       </div>
     </dialog>
 
-    <!-- Airag Chatbot Widget -->
     <script src="https://airagchatbot.com/widget.js" data-org="cms6cz09j00009kvj4y6z3frq"></script>
   </body>
 </html>
