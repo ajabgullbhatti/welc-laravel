@@ -2,8 +2,8 @@
   "name": "laravel-website",
   "private": true,
   "scripts": {
-    "dev": "npx tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch",
-    "build": "node ./node_modules/tailwindcss/lib/index.js -i ./resources/css/app.css -o ./public/css/app.css"
+    "dev": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch",
+    "build": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css"
   },
   "devDependencies": {
     "@vercel/node": "^3.0.0",
