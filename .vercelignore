@@ -4,7 +4,6 @@ node_modules
 .env.local
 .DS_Store
 *.log
-resources/
 app/
 routes/
 AGENTS.md
