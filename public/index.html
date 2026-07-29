@@ -1,245 +1,515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WELC | Learn, Earn & Make Your Future</title>
-    <meta name="description" content="Modern digital skills training for freelancers, professionals, and aspiring entrepreneurs." />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="theme-color" content="#071b2b" />
+    <title>WELC | Practical Digital Skills for a Brighter Future</title>
+    <meta
+      name="description"
+      content="Learn practical digital skills with expert mentors, real projects, and career-focused training at WebExcels Learning Centre."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WELC | Learn the skills. Build your future." />
+    <meta property="og:description" content="Practical digital training for real opportunities." />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WELC | Learn the skills. Build your future." />
+    <meta name="twitter:description" content="Practical digital training for real opportunities." />
+    <meta name="twitter:image" content="/og.png" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
-  <body class="bg-slate-50 text-slate-700">
-    <header class="bg-slate-950 text-white">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#" class="text-xl font-semibold tracking-wide">WELC</a>
-        <nav class="hidden gap-6 text-sm md:flex">
-          <a href="#courses" class="hover:text-cyan-300">Courses</a>
-          <a href="#about" class="hover:text-cyan-300">About</a>
-          <a href="#batches" class="hover:text-cyan-300">Batches</a>
-          <a href="#events" class="hover:text-cyan-300">Events</a>
-          <a href="#contact" class="hover:text-cyan-300">Contact</a>
-        </nav>
-        <a href="#contact" class="rounded-full bg-cyan-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-400">Create Account</a>
+  <body class="overflow-x-hidden bg-[#f7faf9] text-slate-700">
+    <a
+      href="#main-content"
+      class="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-white px-5 py-3 font-bold text-slate-900 shadow-xl transition focus:translate-y-0"
+    >
+      Skip to content
+    </a>
+
+    <div class="bg-[#061927] text-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-2.5 text-center text-xs font-semibold sm:text-sm">
+        <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-amber-400"></span>
+        Admissions are open for the next cohort
+        <a href="#batches" class="ml-1 text-amber-300 underline decoration-amber-300/40 underline-offset-4 hover:text-amber-200">
+          View schedule
+        </a>
       </div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#home" class="group flex items-center gap-3" aria-label="WELC home">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#0c7c72] text-base font-black tracking-tight text-white shadow-lg shadow-teal-900/15 transition group-hover:-rotate-3">
+            WE
+          </span>
+          <span>
+            <span class="block text-lg font-black leading-none tracking-tight text-[#071b2b]">WELC</span>
+            <span class="mt-1 block text-[10px] font-bold uppercase tracking-[0.22em] text-slate-500">Learning Centre</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-bold text-slate-600 lg:flex" aria-label="Primary navigation">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#courses" class="nav-link">Courses</a>
+          <a href="#about" class="nav-link">About us</a>
+          <a href="#batches" class="nav-link">Batches</a>
+          <a href="#events" class="nav-link">Campus life</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <a href="tel:+923348086611" class="rounded-full px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100">
+            +92 334 8086611
+          </a>
+          <a href="#contact" class="button-primary">Start learning <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <button
+          id="menu-button"
+          type="button"
+          class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 text-2xl text-slate-800 transition hover:border-teal-300 hover:bg-teal-50 lg:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          <span id="menu-icon" aria-hidden="true">&#8801;</span>
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-5 shadow-xl lg:hidden" aria-label="Mobile navigation">
+        <div class="mx-auto flex max-w-7xl flex-col gap-1">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#courses" class="mobile-nav-link">Courses</a>
+          <a href="#about" class="mobile-nav-link">About us</a>
+          <a href="#batches" class="mobile-nav-link">Upcoming batches</a>
+          <a href="#events" class="mobile-nav-link">Campus life</a>
+          <a href="#contact" class="button-primary mt-3 justify-center">Start learning <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-900 text-white">
-        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
-          <div class="max-w-2xl">
-            <p class="mb-4 inline-flex rounded-full border border-cyan-400/40 bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-200">Pakistan's trusted digital skills institute</p>
-            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Learn, Earn &amp; Make Your Future</h1>
-            <p class="mt-6 text-lg text-slate-300">Master practical skills like AI, design, development, marketing, and freelancing through industry-led training built for real-world success.</p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#courses" class="rounded-full bg-cyan-500 px-6 py-3 font-semibold text-white transition hover:bg-cyan-400">Explore Courses</a>
-              <a href="#batches" class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Upcoming Batches</a>
+    <main id="main-content">
+      <section id="home" class="hero-grid relative isolate overflow-hidden bg-[#071b2b] text-white">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="mx-auto grid min-h-[720px] max-w-7xl items-center gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+          <div class="relative z-10 max-w-3xl">
+            <div class="eyebrow-dark">
+              <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+              Skills that create opportunities
             </div>
-            <div class="mt-10 flex flex-wrap gap-8 text-sm text-slate-300">
-              <div><div class="text-2xl font-semibold text-white">50+</div><div>Batches Delivered</div></div>
-              <div><div class="text-2xl font-semibold text-white">10k+</div><div>Students Trained</div></div>
-              <div><div class="text-2xl font-semibold text-white">100%</div><div>Practical Learning</div></div>
+            <h1 class="mt-7 text-5xl font-black leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+              Learn the skills.
+              <span class="block text-[#61d5c9]">Build your future.</span>
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+              Expert-led digital training, practical projects, and career guidance designed to help you move confidently from learning to earning.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#courses" class="button-accent justify-center">Explore courses <span aria-hidden="true">&rarr;</span></a>
+              <a href="#batches" class="button-ghost justify-center">View upcoming batches</a>
+            </div>
+            <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-white/10 pt-7">
+              <div class="flex -space-x-3" aria-hidden="true">
+                <span class="avatar bg-amber-300 text-slate-900">AK</span>
+                <span class="avatar bg-teal-300 text-slate-900">HR</span>
+                <span class="avatar bg-sky-300 text-slate-900">FS</span>
+                <span class="avatar bg-white text-slate-900">+</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-1 text-amber-300" aria-label="Rated five out of five">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="mt-1 text-sm font-semibold text-slate-300">Trusted by 10,000+ ambitious learners</p>
+              </div>
             </div>
           </div>
-          <div class="rounded-3xl border border-white/10 bg-white/10 p-4 shadow-2xl backdrop-blur">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Students learning together" class="h-[420px] w-full rounded-2xl object-cover" />
+
+          <div class="relative z-10 mx-auto w-full max-w-[560px] lg:mx-0 lg:ml-auto">
+            <div class="relative rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85"
+                alt="A group of students collaborating on a digital project"
+                class="h-[510px] w-full rounded-[1.5rem] object-cover"
+              />
+              <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/20 bg-[#061927]/90 p-5 shadow-xl backdrop-blur-md">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#61d5c9]">Learning outcome</p>
+                    <p class="mt-2 text-base font-bold text-white">Build a portfolio, not just notes.</p>
+                  </div>
+                  <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-amber-400 text-xl text-slate-950" aria-hidden="true">&#10003;</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -left-8 top-14 hidden rounded-2xl bg-white p-4 text-slate-900 shadow-2xl xl:block">
+              <p class="text-2xl font-black text-[#0c7c72]">50+</p>
+              <p class="text-xs font-bold text-slate-500">Batches delivered</p>
+            </div>
+            <div class="absolute -right-5 top-40 hidden rounded-2xl border border-white/10 bg-amber-400 p-4 text-slate-950 shadow-2xl xl:block">
+              <p class="text-2xl font-black">100%</p>
+              <p class="text-xs font-bold">Hands-on learning</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="courses" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <section class="border-b border-slate-200 bg-white">
+        <div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+          <div class="stat-item"><strong>10K+</strong><span>Students trained</span></div>
+          <div class="stat-item"><strong>20+</strong><span>Career programs</span></div>
+          <div class="stat-item"><strong>4.9/5</strong><span>Student rating</span></div>
+          <div class="stat-item"><strong>2</strong><span>Learning campuses</span></div>
+        </div>
+      </section>
+
+      <section id="courses" class="section-shell">
+        <div class="section-heading">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">Popular programs</p>
-            <h2 class="text-3xl font-bold text-slate-900">Featured courses</h2>
+            <p class="eyebrow-light">Choose your path</p>
+            <h2 class="section-title">Skills built for the real world.</h2>
+            <p class="section-copy">Focused programs that combine expert instruction, guided practice, and portfolio-ready outcomes.</p>
           </div>
-          <a href="#contact" class="text-sm font-semibold text-cyan-700">View all programs →</a>
+          <a href="#contact" class="button-secondary hidden sm:inline-flex">Browse all courses <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <div class="flex items-center justify-between text-sm text-slate-500"><span>Graphic Design</span><span>3 Months</span></div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-900">Graphic Design with AI</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Learn modern design principles, AI-enhanced workflows, and portfolio-ready visuals.</p>
-            <div class="mt-6 flex items-center justify-between">
-              <p class="text-lg font-semibold text-slate-900">Rs 70,000</p>
-              <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Enroll</a>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="course-card group">
+            <div class="course-visual bg-gradient-to-br from-violet-100 via-fuchsia-50 to-amber-50">
+              <span class="course-number text-violet-700">01</span>
+              <span class="course-pill">Most popular</span>
+              <div class="course-monogram bg-violet-600">Gd</div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span>Design &amp; Creative</span><span>12 weeks</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Graphic Design with AI</h3>
+              <p class="mt-3 leading-7 text-slate-600">Create standout brand visuals and accelerate your workflow with modern AI tools.</p>
+              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
+                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 70,000</p></div>
+                <a href="#contact" class="card-arrow" aria-label="Enroll in Graphic Design with AI">&rarr;</a>
+              </div>
             </div>
           </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <div class="flex items-center justify-between text-sm text-slate-500"><span>Video Editing</span><span>2.5 Months</span></div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-900">Video Editing</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Create compelling edits for reels, ads, podcasts, and social media campaigns.</p>
-            <div class="mt-6 flex items-center justify-between">
-              <p class="text-lg font-semibold text-slate-900">Rs 60,000</p>
-              <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Enroll</a>
+
+          <article class="course-card group">
+            <div class="course-visual bg-gradient-to-br from-sky-100 via-cyan-50 to-teal-50">
+              <span class="course-number text-sky-700">02</span>
+              <span class="course-pill">Career track</span>
+              <div class="course-monogram bg-sky-600">Fs</div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span>Development</span><span>11 months</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Full Stack MERN Developer</h3>
+              <p class="mt-3 leading-7 text-slate-600">Build production-ready web applications with React, Node, Express, and MongoDB.</p>
+              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
+                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 75,000</p></div>
+                <a href="#contact" class="card-arrow" aria-label="Enroll in Full Stack MERN Developer">&rarr;</a>
+              </div>
             </div>
           </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <div class="flex items-center justify-between text-sm text-slate-500"><span>Development</span><span>11 Months</span></div>
-            <h3 class="mt-4 text-xl font-semibold text-slate-900">Full Stack MERN Developer</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Build complete web applications with React, Node, Express, and MongoDB.</p>
-            <div class="mt-6 flex items-center justify-between">
-              <p class="text-lg font-semibold text-slate-900">Rs 75,000</p>
-              <a href="#contact" class="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">Enroll</a>
+
+          <article class="course-card group md:col-span-2 xl:col-span-1">
+            <div class="course-visual bg-gradient-to-br from-amber-100 via-orange-50 to-rose-50">
+              <span class="course-number text-amber-700">03</span>
+              <span class="course-pill">Creator track</span>
+              <div class="course-monogram bg-amber-500 text-slate-950">Ve</div>
             </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span>Media &amp; Content</span><span>10 weeks</span>
+              </div>
+              <h3 class="mt-4 text-2xl font-black tracking-tight text-[#071b2b]">Professional Video Editing</h3>
+              <p class="mt-3 leading-7 text-slate-600">Produce polished reels, ads, interviews, and social content that holds attention.</p>
+              <div class="mt-6 flex items-end justify-between border-t border-slate-100 pt-5">
+                <div><span class="text-xs font-semibold text-slate-500">Course fee</span><p class="text-xl font-black text-[#071b2b]">Rs 60,000</p></div>
+                <a href="#contact" class="card-arrow" aria-label="Enroll in Professional Video Editing">&rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <a href="#contact" class="button-secondary mt-7 justify-center sm:hidden">Browse all courses <span aria-hidden="true">&rarr;</span></a>
+      </section>
+
+      <section id="about" class="overflow-hidden bg-[#eaf5f2] py-24 lg:py-32">
+        <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div class="relative">
+            <div class="absolute -left-10 -top-10 h-44 w-44 rounded-full border-[28px] border-white/60"></div>
+            <img
+              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=85"
+              alt="An instructor helping students during a practical session"
+              class="relative h-[560px] w-full rounded-[2rem] object-cover shadow-2xl shadow-teal-950/15"
+            />
+            <div class="absolute -bottom-6 left-5 right-5 rounded-2xl bg-white p-5 shadow-xl sm:left-auto sm:right-6 sm:w-72">
+              <p class="text-sm font-bold text-slate-500">Our promise</p>
+              <p class="mt-2 text-lg font-black leading-snug text-[#071b2b]">Every lesson moves you closer to earning.</p>
+            </div>
+          </div>
+
+          <div class="lg:pl-8">
+            <p class="eyebrow-light">The WELC advantage</p>
+            <h2 class="section-title">Learning that changes what you can do.</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-600">
+              WebExcels Learning Centre helps ambitious learners become confident creators, professionals, and entrepreneurs through structured training and real support.
+            </p>
+            <div class="mt-9 space-y-4">
+              <div class="advantage-row">
+                <span class="advantage-number">01</span>
+                <div><h3>Learn from active professionals</h3><p>Practical insights from mentors who understand today&rsquo;s market.</p></div>
+              </div>
+              <div class="advantage-row">
+                <span class="advantage-number">02</span>
+                <div><h3>Practice on real-world projects</h3><p>Turn every module into work you can confidently showcase.</p></div>
+              </div>
+              <div class="advantage-row">
+                <span class="advantage-number">03</span>
+                <div><h3>Get career and earning guidance</h3><p>Build the habits, profile, and direction needed for your next step.</p></div>
+              </div>
+            </div>
+            <a href="#contact" class="button-primary mt-9">Discover WELC <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="text-center">
+          <p class="eyebrow-light justify-center">More than a classroom</p>
+          <h2 class="section-title mx-auto max-w-3xl">Everything you need to turn knowledge into momentum.</h2>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="feature-card feature-card-dark">
+            <span class="feature-icon">Ex</span>
+            <h3>Expert instructors</h3>
+            <p>Learn from professionals with current, hands-on industry experience.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">Pr</span>
+            <h3>Project-first learning</h3>
+            <p>Practice each skill through guided exercises and meaningful projects.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">Cv</span>
+            <h3>Verified certificate</h3>
+            <p>Graduate with credentials that support your professional profile.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon">Le</span>
+            <h3>Learn to earn</h3>
+            <p>Prepare for freelancing, employment, and business opportunities.</p>
           </article>
         </div>
       </section>
 
-      <section id="about" class="bg-white py-20">
-        <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" alt="Instructor guiding students" class="h-[430px] w-full rounded-3xl object-cover" />
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">Why WELC</p>
-            <h2 class="mt-3 text-3xl font-bold text-slate-900">About WebExcels Learning Centre</h2>
-            <p class="mt-6 text-lg leading-8 text-slate-600">WELC helps learners grow into confident creators through practical training, career guidance, and project-based learning designed for the modern digital economy.</p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 class="font-semibold text-slate-900">Expert instructors</h3><p class="mt-2 text-sm text-slate-600">Learn from professionals with real industry experience.</p></div>
-              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><h3 class="font-semibold text-slate-900">Hands-on projects</h3><p class="mt-2 text-sm text-slate-600">Build a portfolio while learning every step of the way.</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div class="rounded-3xl border border-slate-200 bg-gradient-to-br from-cyan-500 to-cyan-700 p-6 text-white shadow-lg">
-            <h3 class="text-xl font-semibold">Expert Instructors</h3>
-            <p class="mt-3 text-sm leading-6 text-cyan-50">Learn from mentors with real-world expertise and practical guidance.</p>
-          </div>
-          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-slate-900">100% Hands-on</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Every course is built around live projects and portfolio-ready work.</p>
-          </div>
-          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-slate-900">Verified Certificate</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Gain recognized credentials to support freelancing and professional growth.</p>
-          </div>
-          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-slate-900">Learn to Earn</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-600">Develop job-ready and freelance-ready skills that create momentum fast.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="batches" class="bg-slate-900 py-20 text-white">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex items-end justify-between">
+      <section id="batches" class="relative overflow-hidden bg-[#071b2b] py-24 text-white lg:py-32">
+        <div class="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full border-[80px] border-teal-400/5"></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="section-heading">
             <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">Upcoming Learning</p>
-              <h2 class="mt-3 text-3xl font-bold">Upcoming batches</h2>
+              <p class="eyebrow-dark">Plan your learning</p>
+              <h2 class="mt-4 text-4xl font-black tracking-[-0.035em] text-white sm:text-5xl">Upcoming batches</h2>
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">Small, focused groups with practical schedules and direct mentor support.</p>
             </div>
-            <a href="#contact" class="text-sm font-semibold text-cyan-300">Reserve your seat →</a>
+            <a href="#contact" class="button-ghost hidden sm:inline-flex">Reserve your seat <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 class="text-xl font-semibold">Amazon VA Class</h3>
-              <p class="mt-3 text-sm text-slate-300">Mon / Wed / Fri • 11:00 am – 12:30 pm</p>
-              <p class="mt-4 text-2xl font-semibold">Rs 30,000</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 class="text-xl font-semibold">SEO Mastery</h3>
-              <p class="mt-3 text-sm text-slate-300">Tue / Thu / Sat • 3:30 pm – 5:00 pm</p>
-              <p class="mt-4 text-2xl font-semibold">Rs 40,000</p>
-            </div>
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 class="text-xl font-semibold">Graphic Designing</h3>
-              <p class="mt-3 text-sm text-slate-300">Mon / Wed / Fri • 11:00 am – 12:30 am</p>
-              <p class="mt-4 text-2xl font-semibold">Rs 35,000</p>
-            </div>
+
+          <div class="mt-12 grid gap-5 lg:grid-cols-3">
+            <article class="batch-card">
+              <div class="flex items-center justify-between">
+                <span class="batch-date"><strong>12</strong><small>AUG</small></span>
+                <span class="status-pill">Seats available</span>
+              </div>
+              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#61d5c9]">E-commerce</p>
+              <h3 class="mt-2 text-2xl font-black">Amazon Virtual Assistant</h3>
+              <dl class="mt-6 space-y-3 text-sm text-slate-300">
+                <div><dt>Schedule</dt><dd>Mon &middot; Wed &middot; Fri</dd></div>
+                <div><dt>Timing</dt><dd>11:00 am &ndash; 12:30 pm</dd></div>
+                <div><dt>Fee</dt><dd>Rs 30,000</dd></div>
+              </dl>
+              <a href="#contact" class="batch-link">Enroll in this batch <span>&rarr;</span></a>
+            </article>
+
+            <article class="batch-card border-amber-300/30 bg-amber-300 text-slate-950">
+              <div class="flex items-center justify-between">
+                <span class="batch-date border-slate-900/15 bg-white/50"><strong>19</strong><small>AUG</small></span>
+                <span class="status-pill bg-slate-950 text-white">Filling fast</span>
+              </div>
+              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-slate-700">Digital growth</p>
+              <h3 class="mt-2 text-2xl font-black">SEO &amp; Content Strategy</h3>
+              <dl class="mt-6 space-y-3 text-sm text-slate-800">
+                <div class="border-slate-900/10"><dt>Schedule</dt><dd>Tue &middot; Thu &middot; Sat</dd></div>
+                <div class="border-slate-900/10"><dt>Timing</dt><dd>3:30 pm &ndash; 5:00 pm</dd></div>
+                <div class="border-slate-900/10"><dt>Fee</dt><dd>Rs 40,000</dd></div>
+              </dl>
+              <a href="#contact" class="batch-link border-slate-900/15 text-slate-950">Enroll in this batch <span>&rarr;</span></a>
+            </article>
+
+            <article class="batch-card">
+              <div class="flex items-center justify-between">
+                <span class="batch-date"><strong>26</strong><small>AUG</small></span>
+                <span class="status-pill">Seats available</span>
+              </div>
+              <p class="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#61d5c9]">Creative design</p>
+              <h3 class="mt-2 text-2xl font-black">Graphic Design with AI</h3>
+              <dl class="mt-6 space-y-3 text-sm text-slate-300">
+                <div><dt>Schedule</dt><dd>Mon &middot; Wed &middot; Fri</dd></div>
+                <div><dt>Timing</dt><dd>5:30 pm &ndash; 7:00 pm</dd></div>
+                <div><dt>Fee</dt><dd>Rs 35,000</dd></div>
+              </dl>
+              <a href="#contact" class="batch-link">Enroll in this batch <span>&rarr;</span></a>
+            </article>
           </div>
+          <a href="#contact" class="button-ghost mt-7 justify-center sm:hidden">Reserve your seat <span aria-hidden="true">&rarr;</span></a>
         </div>
       </section>
 
-      <section id="events" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div class="flex items-end justify-between">
+      <section id="events" class="section-shell">
+        <div class="section-heading">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">Campus life</p>
-            <h2 class="mt-3 text-3xl font-bold text-slate-900">Recent events</h2>
+            <p class="eyebrow-light">Life at WELC</p>
+            <h2 class="section-title">Where learning meets community.</h2>
           </div>
+          <p class="max-w-md text-base leading-7 text-slate-600">Workshops, showcases, and community moments that make the learning journey memorable.</p>
         </div>
-        <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Student event" class="h-44 w-full object-cover" />
-            <div class="p-6"><h3 class="text-xl font-semibold text-slate-900">Excel Fest 2025</h3><p class="mt-3 text-sm leading-6 text-slate-600">A vibrant showcase of student creativity and innovation with live projects and networking.</p></div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-12">
+          <article class="event-card lg:col-span-7">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=85" alt="Students enjoying a WELC campus event" />
+            <div class="event-overlay">
+              <span>Student showcase &middot; 2025</span>
+              <h3>Excel Fest: Ideas, talent, and new possibilities.</h3>
+              <p>Students presented original projects, connected with mentors, and celebrated a year of growth.</p>
+            </div>
           </article>
-          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
-            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Workshop session" class="h-44 w-full object-cover" />
-            <div class="p-6"><h3 class="text-xl font-semibold text-slate-900">AI & Design Workshop</h3><p class="mt-3 text-sm leading-6 text-slate-600">A hands-on session focused on practical AI tools for modern creatives and marketers.</p></div>
-          </article>
-          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Networking event" class="h-44 w-full object-cover" />
-            <div class="p-6"><h3 class="text-xl font-semibold text-slate-900">Career Networking Meet</h3><p class="mt-3 text-sm leading-6 text-slate-600">Connect with industry professionals, mentors, and founders shaping the future workforce.</p></div>
-          </article>
+          <div class="grid gap-6 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
+            <article class="event-card event-card-small">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85" alt="A practical workshop session" />
+              <div class="event-overlay"><span>Workshop</span><h3>AI for modern creators</h3></div>
+            </article>
+            <article class="event-card event-card-small">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=85" alt="Career networking discussion" />
+              <div class="event-overlay"><span>Career session</span><h3>Meet the people shaping digital careers</h3></div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="bg-white py-20">
+      <section class="bg-white py-24 lg:py-32">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="text-center">
-            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">Student stories</p>
-            <h2 class="mt-3 text-3xl font-bold text-slate-900">What our students say</h2>
+            <p class="eyebrow-light justify-center">Student success stories</p>
+            <h2 class="section-title mx-auto max-w-3xl">Confidence that continues beyond the classroom.</h2>
           </div>
-          <div class="mt-10 grid gap-8 lg:grid-cols-3">
-            <blockquote class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-              <p class="text-lg leading-8 text-slate-700">“The hands-on approach helped me land my first freelance client within a month.”</p>
-              <footer class="mt-6 font-semibold text-slate-900">Ayesha K.</footer>
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <blockquote class="testimonial-card">
+              <div class="text-amber-400" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>&ldquo;The hands-on approach helped me stop overthinking and start building. I landed my first freelance client within a month.&rdquo;</p>
+              <footer><span class="avatar bg-violet-100 text-violet-700">AK</span><div><strong>Ayesha Khan</strong><small>Graphic Design graduate</small></div></footer>
             </blockquote>
-            <blockquote class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-              <p class="text-lg leading-8 text-slate-700">“From zero coding to building live projects, the course was focused and practical.”</p>
-              <footer class="mt-6 font-semibold text-slate-900">Hamza R.</footer>
+            <blockquote class="testimonial-card testimonial-card-featured">
+              <div class="text-amber-300" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>&ldquo;I went from zero coding experience to presenting complete live projects. The structure and mentor support made the difference.&rdquo;</p>
+              <footer><span class="avatar bg-sky-100 text-sky-700">HR</span><div><strong>Hamza Raza</strong><small>Full Stack graduate</small></div></footer>
             </blockquote>
-            <blockquote class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-              <p class="text-lg leading-8 text-slate-700">“The curriculum was modern and directly helped me stand out in the market.”</p>
-              <footer class="mt-6 font-semibold text-slate-900">Fatima S.</footer>
+            <blockquote class="testimonial-card">
+              <div class="text-amber-400" aria-label="Five-star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p>&ldquo;The curriculum felt current, focused, and practical. I finally have a portfolio that reflects what I can actually do.&rdquo;</p>
+              <footer><span class="avatar bg-rose-100 text-rose-700">FS</span><div><strong>Fatima Shah</strong><small>Video Editing graduate</small></div></footer>
             </blockquote>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div class="rounded-[2rem] bg-gradient-to-r from-slate-900 to-cyan-800 p-10 text-white shadow-2xl lg:p-14">
-          <div class="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
+      <section id="contact" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="cta-panel relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#0c7c72] px-6 py-14 text-white shadow-2xl shadow-teal-900/20 sm:px-10 lg:px-16 lg:py-20">
+          <div class="absolute -right-16 -top-20 h-72 w-72 rounded-full border-[52px] border-white/10"></div>
+          <div class="relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
             <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Start your journey</p>
-              <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Ready to grow your future?</h2>
-              <p class="mt-5 max-w-2xl text-lg text-slate-200">Join a community of learners building practical skills for freelancing, employment, and entrepreneurship.</p>
+              <p class="text-sm font-black uppercase tracking-[0.24em] text-teal-100">Your next chapter can start today</p>
+              <h2 class="mt-4 max-w-3xl text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">
+                Ready to turn your potential into practical skills?
+              </h2>
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-teal-50">Talk to our admissions team and find the program that fits your goals.</p>
             </div>
-            <div class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur">
-              <h3 class="text-xl font-semibold">Contact us</h3>
-              <ul class="mt-4 space-y-3 text-sm text-slate-200">
-                <li>Phone: +92-334-8086611</li>
-                <li>Email: edu@welc.pk</li>
-                <li>Locations: Sialkot &amp; Lahore</li>
-              </ul>
-              <a href="mailto:edu@welc.pk" class="mt-6 inline-flex rounded-full bg-cyan-500 px-5 py-3 font-semibold text-white transition hover:bg-cyan-400">Get Started</a>
+            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a href="tel:+923348086611" class="button-accent justify-center">Call admissions <span aria-hidden="true">&rarr;</span></a>
+              <a href="mailto:edu@welc.pk" class="button-ghost justify-center">Email us</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-slate-200 bg-slate-950 py-12 text-slate-300">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+    <footer class="bg-[#061927] text-slate-300">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.65fr_1fr] lg:px-8">
         <div>
-          <h3 class="text-lg font-semibold text-white">WELC</h3>
-          <p class="mt-3 text-sm leading-7">Practical digital skills training for modern learners and professionals.</p>
+          <a href="#home" class="flex items-center gap-3 text-white">
+            <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[#0c7c72] font-black">WE</span>
+            <span class="text-xl font-black">WELC</span>
+          </a>
+          <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">Practical digital skills, expert mentorship, and real opportunities for ambitious learners.</p>
+          <div class="mt-6 flex gap-2">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          </div>
         </div>
         <div>
-          <h3 class="text-lg font-semibold text-white">Quick links</h3>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a href="#courses" class="hover:text-cyan-300">Courses</a></li>
-            <li><a href="#about" class="hover:text-cyan-300">About</a></li>
-            <li><a href="#events" class="hover:text-cyan-300">Events</a></li>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About WELC</a></li>
+            <li><a href="#batches">Batches</a></li>
+            <li><a href="#events">Campus life</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold text-white">Contact</h3>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li>edu@welc.pk</li>
-            <li>+92-334-8086611</li>
-            <li>Sialkot &amp; Lahore</li>
+          <h3 class="footer-title">Programs</h3>
+          <ul class="footer-links">
+            <li><a href="#courses">Graphic Design</a></li>
+            <li><a href="#courses">Web Development</a></li>
+            <li><a href="#courses">Video Editing</a></li>
+            <li><a href="#courses">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Get in touch</h3>
+          <ul class="mt-5 space-y-4 text-sm">
+            <li><span class="block font-bold text-white">Phone</span><a href="tel:+923348086611" class="hover:text-[#61d5c9]">+92 334 8086611</a></li>
+            <li><span class="block font-bold text-white">Email</span><a href="mailto:edu@welc.pk" class="hover:text-[#61d5c9]">edu@welc.pk</a></li>
+            <li><span class="block font-bold text-white">Campuses</span><span>Sialkot &amp; Lahore</span></li>
           </ul>
         </div>
       </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>&copy; 2026 WebExcels Learning Centre. All rights reserved.</p>
+          <p>Learn with purpose. Build with confidence.</p>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+        menuIcon.textContent = isOpen ? '\u2261' : '\u00d7';
+        mobileMenu.classList.toggle('hidden', isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Open navigation menu');
+          menuIcon.textContent = '\u2261';
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
